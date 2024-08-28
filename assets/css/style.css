@@ -144,6 +144,13 @@ h1,h2,h3,h4,h5,h6,p{
     }
 }
 
+@media (max-width: 1024px) {
+    .challengesSecWrapper {
+        width: calc(100% - 2.5rem);
+    }
+}
+
+
 @media (max-width: 600px) {
     body {
         font-size: 10px;
