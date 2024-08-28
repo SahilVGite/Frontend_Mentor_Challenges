@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "Barlow";
+    src: url('../Fonts/Barlow/BarlowCondensed-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NewAmsterdam";
+    src: url('../Fonts/Amsterdam/NewAmsterdam-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --FontBarlow : "Barlow", sans-serif;
+    --FontNewAmsterdam : "NewAmsterdam", sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+.fontendMentorChallengesSec {
+    display: flex;
+    justify-content: center;
+}
+
+.challengesSecWrapper{
+    overflow-y: auto;
+    padding: 1em;
+    width: calc(100% - 6rem);
+    max-width: 120rem;
+    background-color:whitesmoke;
+    margin: 1em 0;
+    border-radius: 10px;
+}
+
+.challengeCardsSec{
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 0px calc(-0.625rem) calc(-0.625rem);
+    width: calc(100% + 1.25rem);
+}
+
+.challengeCardsSec-li{
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    display: flex;
+    margin: calc(0.625rem);
+    width: calc(100% - 1.251rem);
+}
+
+.challengeCards{
+    background-color: whitesmoke;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.challengePreviewImg{
+    overflow: hidden;
+}
+
+.challengePreviewImg:hover img {
+    transform: scale(1.05);
+}
+
+.challengePreviewImg img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.challengeTitle h2{
+    font-family: var(--FontBarlow);
+    font-size: 1.7em;
+    font-weight: 400;
+    margin: 0.5em 0;
+}
+
+.challengeTitle h2:hover{
+    text-decoration: underline;
+}
+
+.langTags{
+    font-family: var(--FontNewAmsterdam);
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.challengeTitle{
+    margin: 0px 1em;
+}
+
+.langTags{
+    margin: 0.3em 0.75em;
+}
+
+.htmlTag{
+    color: rgb(106, 190, 205);
+}
+
+.cssTag{
+    color: rgb(62, 84, 163);
+}
+
+.jsTag{
+    color: rgb(207, 99, 144);
+}
+
+.htmlTag:hover, .cssTag:hover, .jsTag:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 1220px) {
+    body{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 500px) {
+    .challengeCardsSec-li{
+        width: calc(50% - 1.251rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .challengeCardsSec-li{
+        margin: calc(0.9375rem);
+        width: calc(50% - 1.876rem);
+    }
+}
+
+@media (min-width: 1024px) {
+    .challengeCardsSec-li{
+        margin: calc(1.25rem);
+        width: calc(33.3333% - 2.501rem);
+    }
+}

@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "Inter Regular";
+    src: url('../fonts/static/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter Bold";
+    src: url('../fonts/static/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter SemiBold";
+    src: url('../fonts/static/Inter-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root {
+    --p: 14px;
+    --font-regular: "Inter Regular", sans-serif;
+    --font-bold: "Inter Bold", sans-serif;
+    --font-semibold: "Inter SemiBold", sans-serif;
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--grey-900);
+    height: 100vh;
+    font-family: var(--font-regular);
+}
+
+p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.med-crd-sec {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--p);
+    color: var(--white);
+    gap: 10px;
+}
+
+.crd-wrapper {
+    padding: 35px;
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--grey-800);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.prof-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prof-img img {
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+.user-name {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.user-name p {
+    font-size: 25px;
+    color: var(--white);
+    font-family: var(--font-bold);
+}
+
+.user-address {
+    margin-top: 10px;
+    width: 100%;
+    color: var(--green);
+}
+
+.user-profession {
+    margin: 25px 0;
+    width: 100%;
+}
+
+.soc-med-btns-sec {
+    width: 100%;
+}
+
+.soc-med-btns-sec-ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.soc-med-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.soc-med-btn a {
+    width: 100%;
+    font-size: 16px;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 12px;
+    background-color: var(--grey-700);
+    font-weight: 400;
+}
+
+.soc-med-btn a:hover {
+    background-color: var(--green);
+    color: var(--grey-800);
+    font-weight: 600;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--white);
+}
+
+.attribution a {
+    color: var(--green);
+}
+
+a, [contenteditable] {
+    caret-color: var(--green);
+}
+
+@media only screen and (max-width: 425px) {
+    .med-crd-sec {
+        font-size: 3vw;
+    }
+
+    .crd-wrapper {
+        padding: 7vw;
+        width: 65%;
+    }
+
+    .soc-med-btn a {
+        font-size: 3vw;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .prof-img img {
+        max-width: 22vw;
+    }
+
+    .user-name p {
+        font-size: 5vw;
+    }
+
+    .soc-med-btns-sec-ul {
+        gap: 3vw;
+    }
+
+    .user-profession {
+        margin: 6vw 0;
+    }
+
+    .attribution {
+        font-size: 3vw;
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="./js/magnific/magnific-popup.css">
+</head>
+
+<body>
+
+    <a class="image-popup-vertical-fit" href="./images/image-equilibrium.jpg" title="Creation of Jules Wyvern.">
+        <img src="./images/image-equilibrium.jpg" alt="NFT">
+    </a>
+    <a class="image-popup-vertical-fit" href="./images/image-avatar.png" title="Creation of Jules Wyvern.">
+        <img src="./images/image-avatar.png" alt="NFT">
+    </a>
+
+    <script src="./js/jquery-3.6.min.js"></script>
+    <script src="./js/magnific/jquery.magnific-popup.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.image-popup-vertical-fit').magnificPopup({
+                type: 'image',
+                closeOnContentClick: true,
+                mainClass: 'mfp-img-mobile',
+                image: {
+                    verticalFit: true
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

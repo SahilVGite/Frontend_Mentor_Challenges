@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | FAQ accordion</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script src="https://kit.fontawesome.com/807f988254.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <main>
+    <div class="faqs-sec">
+      <section class="content-sec">
+        <div class="faqs-wrapper">
+          <div class="faqs-heading">
+            <h1>FAQs</h1>
+          </div>
+          <ul>
+            <li>
+              <div class="accordion accord-btn-1">
+                <p>What is Frontend Mentor, and how will it help me?</p>
+                <div class="accord-span-sec accord-span-sec-1">
+                  <i class="fa-solid fa-plus pl-1"></i>
+                  <i class="fa-solid fa-minus mn-1"></i>
+                </div>
+              </div>
+              <div class="accordion-data accord-cont-1">Frontend Mentor offers realistic coding challenges to help
+                developers improve
+                their
+                frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
+                all levels and ideal for portfolio building.</div>
+            </li>
+            <li>
+              <div class="accordion accord-btn-2">
+                <p>Is Frontend Mentor free?</p>
+                <div class="accord-span-sec accord-span-sec-2">
+                  <i class="fa-solid fa-plus pl-2"></i>
+                  <i class="fa-solid fa-minus mn-2"></i>
+                </div>
+              </div>
+              <div class="accordion-data accord-cont-2">Yes, Frontend Mentor offers both free and premium coding
+                challenges, with the
+                free
+                option providing access to a range of projects suitable for all skill levels.</div>
+            </li>
+            <li>
+              <div class="accordion accord-btn-3">
+                <p>Can I use Frontend Mentor projects in my portfolio?</p>
+                <div class="accord-span-sec accord-span-sec-3">
+                  <i class="fa-solid fa-plus pl-3"></i>
+                  <i class="fa-solid fa-minus mn-3"></i>
+                </div>
+              </div>
+              <div class="accordion-data accord-cont-3">Yes, you can use projects completed on Frontend Mentor in your
+                portfolio. It's
+                an excellent
+                way to showcase your skills to potential employers!</div>
+            </li>
+            <li>
+              <div class="accordion accord-btn-4">
+                <p>How can I get help if I'm stuck on a Frontend Mentor challenge?</p>
+                <div class="accord-span-sec accord-span-sec-4">
+                  <i class="fa-solid fa-plus pl-4"></i>
+                  <i class="fa-solid fa-minus mn-4"></i>
+                </div>
+              </div>
+              <div class="accordion-data accord-cont-4">The best place to get help is inside Frontend Mentor's Discord
+                community.
+                There's a help
+                channel where you can ask questions and seek support from other community members.</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/SahilGite4fox" target="_blank">Sahil Gite</a>.
+      </div>
+    </div>
+  </main>
+
+  <script src="./assets/js/jquery-3.6.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Initial state: All accordions are closed
+      $(".accordion-data").slideUp();
+      $(".fa-minus").hide();
+
+      // Function to handle the accordion behavior
+      function handleAccordion(button, content, spandiv, pl, mn) {
+        $(button).click(function () {
+          const isOpen = $(content).is(":visible");
+
+          // Close all accordions
+          $(".accordion-data").slideUp();
+          $(".accord-span").removeClass("toggleSpan2");
+          $(".svg-inline--fa").removeClass("toggleSvg-inline--fa");
+          $(".fa-minus").hide();
+          $(".fa-plus").show();
+
+          // Open the clicked accordion if it was closed
+          if (!isOpen) {
+            $(content).slideToggle();
+            $(button).find(".accord-span-2").toggleClass("toggleSpan2");
+            $(spandiv).toggleClass("toggleSvg-inline--fa");
+            $(mn).show();
+            $(pl).hide();
+          }
+        });
+      }
+
+      // Assign the function to each accordion button-content pair
+      handleAccordion(".accord-btn-1", ".accord-cont-1", ".accord-span-sec-1 svg", ".pl-1", ".mn-1");
+      handleAccordion(".accord-btn-2", ".accord-cont-2", ".accord-span-sec-2 svg", ".pl-2", ".mn-2");
+      handleAccordion(".accord-btn-3", ".accord-cont-3", ".accord-span-sec-3 svg", ".pl-3", ".mn-3");
+      handleAccordion(".accord-btn-4", ".accord-cont-4", ".accord-span-sec-4 svg", ".pl-4", ".mn-4");
+    });
+  </script>
+</body>
+
+</html>
