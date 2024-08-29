@@ -1,0 +1,245 @@
+:root {
+    --FontLexendDeca: "Inter", sans-serif;
+    --FontInter: "Inter", sans-serif;
+    --FontSize: 15px;
+    --VerydarkblueMainBackground: hsl(233, 47%, 7%);
+    --DarkdesaturatedblueCardBackground: hsl(244, 38%, 16%);
+    --SoftvioletAccent: hsl(277, 64%, 61%);
+    --Whitemain_heading_stats: hsl(0, 0%, 100%);
+    --SlightlyTransparentWhiteMainParagraph: hsla(0, 0%, 100%, 0.75);
+    --SlightlyTransparentWhiteStatHeadings: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: var(--FontSize);
+    font-family: var(--FontInter);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.statsPreviewCard-sec {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--VerydarkblueMainBackground);
+}
+
+.statsPreviewCard {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statsPreviewCard-wrapper {
+    margin: auto 4em;
+    max-width: 1000px;
+    display: flex;
+    background-color: var(--DarkdesaturatedblueCardBackground);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 90%;
+}
+
+.statsPreviewCard-wrapper>* {
+    width: 50%;
+    align-self: center;
+    box-sizing: border-box;
+}
+
+.desktop-header-img,
+.mobile-header-img {
+    position: relative;
+}
+
+.desktop-header-img img {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+}
+
+.mobile-header-img img {
+    display: flex;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.desktop-header-img::after {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 64%, 61%, 0.5);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.mobile-header-img::after {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 64%, 61%, 0.5);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contentSec {
+    padding: 3em;
+    /* width: 60%; */
+    box-sizing: border-box;
+}
+
+.headingH2 h2 {
+    color: var(--Whitemain_heading_stats);
+    font-size: 2em;
+    margin-bottom: 0.6em;
+}
+
+.headingSpan {
+    color: var(--SoftvioletAccent);
+}
+
+.statsPreviewPara {
+    font-size: 1em;
+    color: var(--SlightlyTransparentWhiteMainParagraph);
+    line-height: 1.5em;
+    padding-right: 2em;
+}
+
+.indiValContSec {
+    display: flex;
+    gap: 4em;
+    margin-top: 3em;
+}
+
+.indiVal {
+    color: var(--Whitemain_heading_stats);
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+
+.indiTitle {
+    color: var(--SlightlyTransparentWhiteStatHeadings);
+    text-transform: uppercase;
+    font-family: var(--FontLexendDeca);
+}
+
+.attribution {
+    font-size: 1em;
+    text-align: center;
+    color: var(--SlightlyTransparentWhiteMainParagraph);
+}
+
+.attribution a {
+    color: var(--SoftvioletAccent);
+}
+
+.attribution a:hover {
+    cursor: pointer;
+    color: var(--Whitemain_heading_stats);
+    text-decoration: none;
+}
+
+@media only screen and (min-width:601px) {
+    .mobile-header-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .desktop-header-img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    body {
+        font-size: 12px;
+    }
+
+    .statsPreviewCard-wrapper {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    body{
+        font-size: 11px;
+    }
+    .contentSec {
+        padding: 2em;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    body {
+        font-size: 15px;
+    }
+
+    .statsPreviewCard-wrapper {
+        flex-direction: column-reverse;
+        margin: 6em 0;
+        width: 90%;
+    }
+
+    .statsPreviewCard-wrapper>* {
+        width: 100%;
+    }
+
+    .contentSec {
+        text-align: center;
+    }
+
+    .indiValContSec {
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
+@media only screen and (max-width:680px){
+    body{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:375px){
+    body{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:320px){
+    body{
+        font-size: 12px;
+    }
+}
