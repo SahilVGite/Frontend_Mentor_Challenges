@@ -224,6 +224,10 @@ img {
         flex-direction: column;
         gap: 2em;
     }
+
+    section.statsPreviewCard-sec {
+        height: auto;
+    }
 }
 
 @media only screen and (max-width:680px){
