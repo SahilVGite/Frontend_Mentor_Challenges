@@ -1,0 +1,191 @@
+:root {
+    --FontLexendDeca: "Lexend Deca", sans-serif;
+    --FontBigShouldersDisplay: "Big Shoulders Display", sans-serif;
+    --FontSize: 15px;
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhiteParagraphs: hsla(0, 0%, 100%, 0.75);
+    --VeryLightGrayBackgroundHeadingsButtons: hsl(0, 0%, 95%);
+}
+
+image {
+    width: 100%;
+    height: auto;
+}
+
+h2,
+p,
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: var(--FontSize);
+    margin: 0;
+    padding: 0;
+    background-color: var(--VeryLightGrayBackgroundHeadingsButtons);
+    font-family: var(--FontLexendDeca);
+}
+
+section {
+    width: 100%;
+    min-height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsSec {
+    max-width: 1000px;
+    width: 90%;
+}
+
+.cardsSec-ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.cards {
+    padding: 2em;
+    padding-right: 3em;
+}
+
+.sedans {
+    background-color: var(--BrightOrange);
+}
+
+.suvs {
+    background-color: var(--DarkCyan);
+}
+
+.luxury {
+    background-color: var(--VeryDarkCyan);
+}
+
+.cardIcon{
+    margin: 1em 0;
+}
+
+.cardHeading h2{
+    font-family: var(--FontBigShouldersDisplay);
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--VeryLightGrayBackgroundHeadingsButtons);
+    margin: 0.5em 0;
+}
+
+.cardPara p{
+    font-size: 1.25em;
+    color: var(--TransparentWhiteParagraphs);
+    line-height: 1.8em;
+    margin-bottom: 4.5em;
+}
+
+.learnMore-btn button{
+    font-size: 1em;
+    background-color: var(--VeryLightGrayBackgroundHeadingsButtons);
+    font-family: var(--FontLexendDeca);
+    font-weight: 700;
+    padding: 1em 2em;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    margin-bottom: 1.3em;
+    border: 2px solid transparent;
+}
+
+.learnMore-btn button:hover{
+    background-color: transparent;
+    color: var(--VeryLightGrayBackgroundHeadingsButtons) !important;
+    border: 2px solid var(--VeryLightGrayBackgroundHeadingsButtons);
+    cursor: pointer;
+}
+
+.sedans .learnMore-btn button{
+    color: var(--BrightOrange);
+}
+
+.suvs .learnMore-btn button{
+    color: var(--DarkCyan);
+}
+
+.luxury .learnMore-btn button{
+    color: var(--VeryDarkCyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width:970px) {
+    .sedans {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .luxury{
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .cardsSec-ul {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width:969px) {
+    .sedans {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .luxury{
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .cardsSec-ul{
+        margin: 2vw 0;
+    }
+
+    .cardsSec{
+        max-width: 400px;
+    }
+
+    .cardPara p {
+        font-size: 1.4em;
+        margin-bottom: 1em;
+    }
+
+    .cards {
+        padding: 2.5em;
+    }
+
+    .learnMore-btn button {
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .cardHeading h2 {
+        font-size: 2.2em;
+    }
+
+    .cardPara p {
+        font-size: 0.9em;
+    }
+
+    .learnMore-btn button {
+        font-size: 0.7em;
+    }
+}
